@@ -71,23 +71,7 @@ function NestedTable() {
                   </Table>
                         </TableCell>
                         <TableCell>
-                        <Table sx={{border:"1px solid black"}}>
-                    <TableHead>
-                      <TableRow>
-                        <Stack direction="row" >
-                        <Item sx={{ borderBottom: "1px solid black",borderRight: "1px solid black"}}> SNO</Item>
-                          <Item sx={{ borderBottom: "1px solid black",borderRight: "1px solid black"}}> Name</Item>
-                          <Item sx={{ borderBottom: "1px solid black",borderRight: "1px solid black"}}> UnitPrice</Item>
-                        </Stack>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell>Nested Table Cell 2</TableCell>
-                      </TableRow>
-                      {/* Add more rows as needed */}
-                    </TableBody>
-                  </Table>
+                          <CardDemo/>
                         </TableCell>
                       </TableRow>
                       {/* Add more rows as needed */}
