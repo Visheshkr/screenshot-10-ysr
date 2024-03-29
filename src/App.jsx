@@ -10,6 +10,7 @@ import {
   Stack,
 } from "@mui/material";
 import { styled } from "@mui/material/styles";
+import CardDemo from "./Components/CardDemo";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -17,97 +18,22 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
+
+const cardTitle="Lab Investigation";
 function NestedTable() {
   return (
     <>
       <TableContainer component={Paper} sx={{ border: "1px solid black" }}>
         <Table sx={{ width: "100%" }}>
-          <TableHead sx={{ m: "auto" }}>
-            <TableRow>
-              <TableCell 
-                sx={{ textAlign: "center" }}
-                style={{ border: "1px solid black" }}>
-                Patient Service Phase
-              </TableCell>
-              <TableCell
-                sx={{ textAlign: "center" }}
-                style={{ border: "1px solid black" }}
-              >
-                Lab Investigations
-              </TableCell>
-              <TableCell
-                sx={{ textAlign: "center" }}
-                style={{ border: "1px solid black" }}
-              >
-                Imageology
-              </TableCell>
-              <TableCell
-                sx={{ textAlign: "center" }}
-                style={{ border: "1px solid black" }}
-              >
-                Pharmacy
-              </TableCell>
-            </TableRow>
-          </TableHead>
           <TableBody>
             <TableRow>
-              <Stack sx={{ mt: "20px" }}>
-                <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> </Item>
-                <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Pre-OP</Item>
-                <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> OT</Item>
-                <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Post-OP</Item>
-                <Item sx={{ border: "1px solid black" , borderRadius:"0"}}>
-                  Post Treatment Evidence
-                </Item>
-              </Stack>
-
               <TableCell>
-                <TableContainer
-                  component={Paper}
-                  sx={{ border: "1px solid black" }}
-                >
-                  <Table>
-                    <TableHead>
-                      <TableRow>
-                        <Stack direction="row">
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> SNO</Item>
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Name</Item>
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Unit Price</Item>
-                        </Stack>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell>Nested Table Cell 2</TableCell>
-                      </TableRow>
-                      {/* Add more rows as needed */}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
               </TableCell>
               <TableCell>
-                <TableContainer
-                  component={Paper}
-                  sx={{ border: "1px solid black" }}
-                >
-                  <Table>
-                    <TableHead>
-                      <TableRow>
-                        <Stack direction="row">
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> SNO</Item>
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Name</Item>
-                          <Item sx={{ border: "1px solid black" , borderRadius:"0"}}> Unit Price</Item>
-                        </Stack>
-                      </TableRow>
-                    </TableHead>
-                    <TableBody>
-                      <TableRow>
-                        <TableCell>Nested Table Cell 2</TableCell>
-                      </TableRow>
-                      {/* Add more rows as needed */}
-                    </TableBody>
-                  </Table>
-                </TableContainer>
+                    <CardDemo cardTitle={cardTitle}/>
+              </TableCell>
+              <TableCell>
+                    <CardDemo cardTitle={cardTitle}/>
               </TableCell>
               <TableCell>
                 <TableContainer
